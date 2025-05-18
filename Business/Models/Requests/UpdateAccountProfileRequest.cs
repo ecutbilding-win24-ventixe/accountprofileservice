@@ -1,14 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿namespace Business.Models.Requests;
 
-namespace Presentation.Entities;
-
-public class ProfileEntity
+public class UpdateAccountProfileRequest
 {
-    [Key]
     public string UserId { get; set; } = null!;
-
     public string? FirstName { get; set; }
-
     public string? LastName { get; set; }
 
 }

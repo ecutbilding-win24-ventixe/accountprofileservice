@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Presentation.Entities;
+namespace Data.Entities;
 
 public class AddressInfoEntity
 {
@@ -23,6 +23,5 @@ public class AddressInfoEntity
 
     public string PostalCode { get; set; } = null!;
     public string City { get; set; } = null!;
-
-
 }
+

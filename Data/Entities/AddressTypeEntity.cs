@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Presentation.Entities;
+namespace Data.Entities;
 
 public class AddressTypeEntity
 {
@@ -9,3 +9,4 @@ public class AddressTypeEntity
 
     public string AddressType { get; set; } = null!;
 }
+
