@@ -4,6 +4,7 @@ public class Profile
 {
     public string Id { get; set; } = null!;
     public string? FirstName { get; set; }
-
     public string? LastName { get; set; }
+    
+    public AddressInfo AddressInfo { get; set; } = null!;
 }

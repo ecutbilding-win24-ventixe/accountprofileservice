@@ -9,11 +9,6 @@ public class AddressInfoEntity
     public string Id { get; set; } = Guid.NewGuid().ToString();
 
 
-    [ForeignKey(nameof(Profile))]
-    public string UserId { get; set; } = null!;
-    public ProfileEntity Profile { get; set; } = null!;
-
-
     [ForeignKey(nameof(AddressType))]
     public int AddressTypeId { get; set; }
     public AddressTypeEntity AddressType { get; set; } = null!;

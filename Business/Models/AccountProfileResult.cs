@@ -6,4 +6,3 @@ public class AccountProfileResult<T> : ServiceResult
 }
 
 public class AccountProfileResult : ServiceResult { }
-

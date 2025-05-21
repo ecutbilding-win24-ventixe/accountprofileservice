@@ -6,7 +6,7 @@ namespace Data.Contexts;
 public class DataContext(DbContextOptions<DataContext> options) : DbContext(options)
 {
     public DbSet<ProfileEntity> UserProfiles { get; set; }
-    public DbSet<AddressInfoEntity> AddressInfos { get; set; }
+    public DbSet<AddressInfoEntity> AddressInfo { get; set; }
     public DbSet<AddressTypeEntity> AddressTypes { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

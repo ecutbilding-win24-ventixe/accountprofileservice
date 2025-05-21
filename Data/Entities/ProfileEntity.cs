@@ -12,5 +12,10 @@ public class ProfileEntity
 
     public string? LastName { get; set; }
 
+
+    [ForeignKey(nameof(AddressInfo))]
+    public string AddressInfoId { get; set; } = null!;
+    public AddressInfoEntity AddressInfo { get; set; } = null!;
+
 }
 
