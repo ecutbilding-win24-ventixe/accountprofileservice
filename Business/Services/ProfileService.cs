@@ -67,11 +67,11 @@ public class ProfileService(IProfileRepository profileRepository, IAddressInfoRe
 
             var newAddress = new AddressInfoEntity
             {
-                StreetName = request.StreetName,
-                StreetNumber = request.StreetNumber,
-                PostalCode = request.PostalCode,
-                City = request.City,
-                AddressTypeId = request.AddressTypeId
+                StreetName = request.StreetName ?? "",
+                StreetNumber = request.StreetNumber ?? "",
+                PostalCode = request.PostalCode ?? "",
+                City = request.City ?? "",
+                AddressTypeId = request.AddressTypeId != 0 ? request.AddressTypeId : 1,
             };
 
             var addressResult = await _addressInfoRepository.AddAsync(newAddress);
@@ -83,6 +83,7 @@ public class ProfileService(IProfileRepository profileRepository, IAddressInfoRe
 
             var newProfile = new ProfileEntity
             {
+                UserId = request.UserId,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 AddressInfoId = newAddress.Id,
